@@ -1,0 +1,13 @@
+stages:
+  - build
+
+Build NodeJS App dev:
+  stage: build
+  tags:
+    - dev-gh
+  script:
+    - cp ~/.env .
+    - npm install
+    - ls
+  only:
+    - dev
